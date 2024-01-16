@@ -1,13 +1,10 @@
 import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
+import Projects from "./components/ProjectsPage";
 
-export default function Home() {
+export default async function Page() {
   return (
-    <div>
-      <Navbar />
+    <>
       <Hero />
-      <Projects />
-    </div>
+    </>
   );
 }
