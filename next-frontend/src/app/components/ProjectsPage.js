@@ -1,7 +1,15 @@
 import React, { cache } from "react";
-import Image from "next/legacy/image";
 import { createClient } from "next-sanity";
 import Navbar from "../components/Navbar";
+import imageUrlBuilder from "@sanity/image-url";
+import Link from "next/link";
+
+const builder = imageUrlBuilder({
+  baseUrl: "https://cdn.sanity.io/",
+  projectId: "qb0ilyn2",
+  dataset: "production",
+});
+const urlFor = (source) => builder.image(source);
 
 export default async function ProjectsPage() {
   const client = createClient({
@@ -18,22 +26,20 @@ export default async function ProjectsPage() {
   return (
     <section>
       <Navbar className="absolute z-50" />
-      <div className="container mx-auto py-24 md:py-48">
+      <div className="container mx-auto py-20 md:py-10">
         <h2 className="text-3xl font-bold mb-8">My Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
           {projects.map((project) => (
             <div
               key={project._id}
               className="max-w-md rounded-lg overflow-hidden shadow-md bg-gray-700"
             >
-              {/* <Image
-                className=" hover:scale-105"
-                src={project.projectImage.asset._ref}
-                alt={project.title}
-                width={500}
-                height={250}
-              /> */}
-              {/* <img src={project.projectImage.asset._ref} alt={project.title} /> */}
+              <img
+                src={urlFor(project.projectImage.asset._ref)
+                  .width(500)
+                  .height(300)
+                  .toString()}
+              />
               <div className="p-4">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                 <p className="mb-4 text-justify">{project.description}</p>
@@ -41,14 +47,14 @@ export default async function ProjectsPage() {
                   <p className="text-gray-300">
                     Technologies: {project.technologies}
                   </p>
-                  <p className="text-blue-500">
-                    <a
+                  <p>
+                    <Link
                       href={project.projectLink}
                       target="_blank"
                       className="text-white-500"
                     >
                       View Project &#8594;
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
