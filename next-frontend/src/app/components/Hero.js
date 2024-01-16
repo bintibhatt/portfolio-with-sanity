@@ -21,8 +21,8 @@ const Hero = () => {
           <Image
             src="/path/to/your/hero-image.jpg"
             alt="Portfolio Hero Image"
-            layout="fill"
-            objectFit="cover"
+            width={300}
+            height={300}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-transparent"></div>
         </div>
