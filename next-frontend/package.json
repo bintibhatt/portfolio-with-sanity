@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/client": "^6.11.1",
     "framer-motion": "^10.18.0",
     "next": "14.0.4",
     "next-sanity": "^7.0.10",
+    "next-sanity-image": "^6.1.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-portable-text": "^0.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
