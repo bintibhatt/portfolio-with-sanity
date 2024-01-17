@@ -24,30 +24,26 @@ export default async function ProjectsPage() {
 
   console.log(projects);
   return (
-    <section className="bg-gray-800 h-screen">
-      <Navbar className="absolute z-50" />
-      <div className="container mx-auto py-20 md:py-10 ">
+    <div className="flex h-full bg-gray-600 p-20">
+      <div className="container">
         <h2 className="text-3xl font-bold mb-8">My Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {projects.map((project) => (
             <div
               key={project._id}
-              className="max-w-md rounded-lg overflow-hidden shadow-md bg-gray-700"
+              className="max-w-64 rounded-lg overflow-hidden shadow-md bg-gray-700"
             >
-              <img
-                src={urlFor(project.projectImage.asset._ref)
-                  .width(500)
-                  .height(300)
-                  .toString()}
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="mb-4 text-justify">{project.description}</p>
-                <div className="">
-                  <p className="text-gray-300">
-                    Technologies: {project.technologies}
+              <div className="flex items-center p-4">
+                <i className="fas fa-laptop-code fa-3x text-gray-400 mr-4"></i>
+                <div>
+                  <h3 className="text-lg font-bold mb-2">{project.title}</h3>
+                  <p className="mb-4 text-base text-justify">
+                    {project.description}
                   </p>
-                  <p>
+                  <div className="">
+                    <p className="text-gray-300">
+                      Technologies: {project.technologies}
+                    </p>
                     <Link
                       href={project.projectLink}
                       target="_blank"
@@ -55,13 +51,13 @@ export default async function ProjectsPage() {
                     >
                       View Project &#8594;
                     </Link>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

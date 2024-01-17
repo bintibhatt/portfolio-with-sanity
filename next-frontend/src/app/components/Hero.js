@@ -33,7 +33,7 @@ const Hero = () => {
             </button>
             <p className="text-2xl mx-5"></p>
             <button className="text-white px-4 py-2 rounded-md bg-slate-700 bg-opacity-70 hover:bg-slate-500 hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md">
-              <Link href="/contact">Contact Me!</Link>
+              <Link href="/about/contact">Contact Me!</Link>
             </button>
           </div>
         </div>
