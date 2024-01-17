@@ -1,10 +1,9 @@
 import Hero from "./components/Hero";
-import Projects from "./components/ProjectsPage";
 
 export default async function Page() {
   return (
-    <>
+    <div className="overflow-hidden scroll-smooth">
       <Hero />
-    </>
+    </div>
   );
 }
