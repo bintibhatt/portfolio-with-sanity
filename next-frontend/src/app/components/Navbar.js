@@ -26,11 +26,6 @@ const Navbar = () => {
       <div className="hidden md:block md:ml-10">
         <ul className="flex space-x-8 items-center">
           <li>
-            <Link className="hover:text-gray-300" href="/">
-              Home
-            </Link>
-          </li>
-          <li>
             <Link className="hover:text-gray-300" href="/about">
               About
             </Link>

@@ -5,9 +5,8 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section className="h-fit">
-      <Navbar className="absolute z-50" />
       <div className="container mx-auto px-4 md:px-8 py-20 md:pt-32 lg:pt-48">
-        <div className="relative z-20 my-28 mx-auto mr-48">
+        <div className="relative z-20 my-36 mx-auto mr-96">
           <h1 className="text-5xl font-bold tracking-tight my-5 text-center">
             Binti Bhatt
           </h1>
@@ -29,8 +28,12 @@ const Hero = () => {
             </span>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center mt-5">
-            <button className="text-white px-4 py-2 rounded-md bg-slate-500 bg-opacity-50 hover:bg-slate-500 hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md">
-              <Link href="/projects">Explore my Projects</Link>
+            <button className="text-white px-4 py-2 rounded-md bg-slate-700 bg-opacity-70 hover:bg-slate-500 hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md">
+              <Link href="/about">Know more about me!</Link>
+            </button>
+            <p className="text-2xl mx-5"></p>
+            <button className="text-white px-4 py-2 rounded-md bg-slate-700 bg-opacity-70 hover:bg-slate-500 hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md">
+              <Link href="/contact">Contact Me!</Link>
             </button>
           </div>
         </div>
