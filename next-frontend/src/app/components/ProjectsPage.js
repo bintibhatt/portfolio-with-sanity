@@ -31,27 +31,32 @@ export default async function ProjectsPage() {
           {projects.map((project) => (
             <div
               key={project._id}
-              className="max-w-64 rounded-lg overflow-hidden shadow-md bg-gray-700"
+              className="max-w-64 rounded-lg overflow-hidden shadow-md bg-gray-700 hover:bg-gray-800 h-72"
             >
-              <div className="flex items-center p-4">
-                <i className="fas fa-laptop-code fa-3x text-gray-400 mr-4"></i>
-                <div>
-                  <h3 className="text-lg font-bold mb-2">{project.title}</h3>
-                  <p className="mb-4 text-base text-justify">
-                    {project.description}
-                  </p>
-                  <div className="">
-                    <p className="text-gray-300">
-                      Technologies: {project.technologies}
-                    </p>
-                    <Link
-                      href={project.projectLink}
-                      target="_blank"
-                      className="text-blue-500"
-                    >
-                      View Project &#8594;
-                    </Link>
-                  </div>
+              <div className="p-2">
+                <h3 className="h-16 flex justify-center items-center w-full text-lg font-bold text-center text-white">
+                  {project.title}
+                </h3>
+                <hr></hr>
+                <p className="text-sm text-justify text-gray-400">
+                  {project.description}
+                </p>
+                <div className="text-sm text-gray-200">
+                  {project.technologies.split(", ").map((tech) => (
+                    <div className="inline-flex px-2.5 py-0.5 text-xs font-medium bg-gray-800 mr-1">
+                      {tech}
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-center">
+                  <Link
+                    href={project.projectLink}
+                    target="_blank"
+                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                  >
+                    View Project
+                  </Link>
                 </div>
               </div>
             </div>
