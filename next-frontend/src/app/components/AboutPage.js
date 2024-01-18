@@ -12,10 +12,8 @@ export default async function AboutPage() {
   const about = await client.fetch(`*[_type == "about"] `, {
     cache: "no-cache",
   });
-
-  console.log(about);
   return (
-    <div className="flex h-full bg-gray-600 bg-opacity-60 p-20 rounded-b-3xl">
+    <div className="flex bg-gray-600 bg-opacity-60 p-20 rounded-b-3xl">
       <div className="container">
         <h2 className="text-3xl font-bold mb-8">About Me</h2>
 

@@ -15,8 +15,6 @@ export default async function ProjectsPage() {
       cache: "no-cache",
     }
   );
-
-  console.log(projects);
   return (
     <div className="flex h-full bg-gray-600 bg-opacity-60 p-20 rounded-b-3xl">
       <div className="container">

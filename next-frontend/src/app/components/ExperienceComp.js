@@ -20,10 +20,8 @@ export default async function ExperiencePage() {
       cache: "no-cache",
     }
   );
-
-  console.log(experiences);
   return (
-    <div className="flex justify-around h-full bg-gray-600 bg-opacity-60 p-16 rounded-b-3xl">
+    <div className="flex justify-between h-full bg-gray-600 bg-opacity-60 p-16 rounded-b-3xl">
       <div>
         <h1 className="text-3xl font-bold mb-8">My Experiences</h1>
         <ol className="relative border-s border-gray-200 dark:border-gray-300">
@@ -57,7 +55,6 @@ export default async function ExperiencePage() {
               <time className="mb-1 text-md font-normal leading-none text-gray-300 dark:text-gray-300">
                 {education.date}
               </time>
-              s
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 {education.degree}
               </h3>

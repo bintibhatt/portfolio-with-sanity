@@ -5,7 +5,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section className="h-fit">
-      <div className="container mx-auto px-4 md:px-8 py-20 md:pt-32 lg:pt-48">
+      <div className="container mx-auto px-4 md:px-8 py-20 md:pt-32 lg:pt-48 max-w-screen-xl">
         <div className="relative z-20 my-36 mx-auto mr-96">
           <h1 className="text-5xl font-bold tracking-tight my-5 text-center">
             Binti Bhatt
