@@ -37,7 +37,7 @@ const Navbar = () => {
             className={`hover:text-gray-300 ${isActive("/about/experience")}`}
           >
             <Link className="active-link" href="/about/experience">
-              Experience
+              Learning
             </Link>
           </li>
           <li className={`hover:text-gray-300 ${isActive("/about/contact")}`}>

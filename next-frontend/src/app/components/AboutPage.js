@@ -28,7 +28,7 @@ export default async function AboutPage() {
         <div className="mt-8">
           <Link
             href="/about/contact"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium bg-gray-500 text-black rounded-md hover:bg-gray-800 hover:text-white"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium bg-gray-400 text-black rounded-md hover:bg-gray-800 hover:text-white"
           >
             Get in touch &#8594;
           </Link>

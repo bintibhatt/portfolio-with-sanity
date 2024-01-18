@@ -1,15 +1,6 @@
-import React, { cache } from "react";
+import React from "react";
 import { createClient } from "next-sanity";
-import Navbar from "../components/Navbar";
-import imageUrlBuilder from "@sanity/image-url";
 import Link from "next/link";
-
-const builder = imageUrlBuilder({
-  baseUrl: "https://cdn.sanity.io/",
-  projectId: "qb0ilyn2",
-  dataset: "production",
-});
-const urlFor = (source) => builder.image(source);
 
 export default async function ProjectsPage() {
   const client = createClient({
@@ -18,9 +9,12 @@ export default async function ProjectsPage() {
     useCdn: false,
   });
 
-  const projects = await client.fetch(`*[_type == "project"] `, {
-    cache: "no-cache",
-  });
+  const projects = await client.fetch(
+    `*[_type == "project"] | order(_createdAt asc) `,
+    {
+      cache: "no-cache",
+    }
+  );
 
   console.log(projects);
   return (
