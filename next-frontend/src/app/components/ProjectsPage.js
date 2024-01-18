@@ -24,39 +24,37 @@ export default async function ProjectsPage() {
 
   console.log(projects);
   return (
-    <div className="flex h-full bg-gray-600 p-20">
+    <div className="flex h-full bg-gray-600 p-20 rounded-b-3xl">
       <div className="container">
         <h2 className="text-3xl font-bold mb-8">My Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {projects.map((project) => (
             <div
               key={project._id}
-              className="max-w-64 rounded-lg overflow-hidden shadow-md bg-gray-700 hover:bg-gray-800 h-72"
+              className="max-w-sm rounded-lg overflow-hidden shadow-md bg-gray-800 hover:bg-gray-900"
             >
-              <div className="p-2">
-                <h3 className="h-16 flex justify-center items-center w-full text-lg font-bold text-center text-white">
-                  {project.title}
-                </h3>
-                <hr></hr>
-                <p className="text-sm text-justify text-gray-400">
-                  {project.description}
-                </p>
-                <div className="text-sm text-gray-200">
-                  {project.technologies.split(", ").map((tech) => (
-                    <div className="inline-flex px-2.5 py-0.5 text-xs font-medium bg-gray-800 mr-1">
-                      {tech}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-center">
+              <div className="p-4">
+                <div className="flex items-center h-16 border-b-2">
+                  <h3 className="w-56 text-lg font-bold text-white tracking-tight mb-2">
+                    {project.title}
+                  </h3>
                   <Link
                     href={project.projectLink}
                     target="_blank"
-                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                    className="text-white border-spacing-2 border-2 border-white rounded-full px-2 py-1 text-sm font-semibold hover:bg-gray-300 hover:text-black"
                   >
-                    View Project
+                    View &rarr;
                   </Link>
+                </div>
+                <p className="text-gray-400">{project.description}</p>
+                <div className="flex items-center justify-between mt-4">
+                  <div className="flex flex-wrap">
+                    {project.technologies.split(", ").map((tech) => (
+                      <span key={tech} className="text-white px-2 list-disc">
+                        <li>{tech}</li>
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

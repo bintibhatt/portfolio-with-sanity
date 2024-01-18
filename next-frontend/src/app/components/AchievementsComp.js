@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AchievementsComp() {
   return (
-    <div className="flex h-full bg-gray-600 p-20">
+    <div className="flex h-full bg-gray-600 p-20 rounded-b-3xl">
       <div>
         <h1 className="text-3xl font-bold mb-8">My Achievements</h1>
         <ol class="relative border-s border-gray-200 dark:border-gray-700">

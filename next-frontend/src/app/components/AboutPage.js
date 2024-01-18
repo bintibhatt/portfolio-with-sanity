@@ -15,7 +15,7 @@ export default async function AboutPage() {
 
   console.log(about);
   return (
-    <div className="flex h-full bg-gray-600 p-20">
+    <div className="flex h-full bg-gray-600 p-20 rounded-b-3xl">
       <div className="container">
         <h2 className="text-3xl font-bold mb-8">About Me</h2>
 
@@ -28,7 +28,7 @@ export default async function AboutPage() {
         <div className="mt-8">
           <Link
             href="/about/contact"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium bg-gray-500 text-black rounded-md hover:bg-gray-800 hover:text-white"
           >
             Get in touch &#8594;
           </Link>

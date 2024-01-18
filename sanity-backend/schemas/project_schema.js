@@ -19,11 +19,6 @@ export default {
       type: 'string',
     },
     {
-      name: 'projectImage',
-      title: 'Project Image',
-      type: 'image',
-    },
-    {
       name: 'projectLink',
       title: 'Project Link',
       type: 'url',

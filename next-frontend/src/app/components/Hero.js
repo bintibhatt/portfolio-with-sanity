@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="flex items-center justify-center mt-7">
             <span className="text-3xl font-bold mr-2">640+</span>
             <p className="text-base font-medium">Hours of Coding</p>
-            <p className="text-3xl mx-7">|</p>
+            <p className="text-3xl font-bold mx-7">|</p>
             <span className="text-3xl font-bold mr-2">5+</span>
             <p className="text-base font-medium">Projects Completed</p>
           </div>
@@ -28,11 +28,11 @@ const Hero = () => {
             </span>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center mt-5">
-            <button className="text-white px-4 py-2 rounded-md bg-slate-700 bg-opacity-70 hover:bg-slate-500 hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md">
+            <button className="text-white px-4 py-2 rounded-md bg-slate-500 bg-opacity-70 hover:bg-slate-700 hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md">
               <Link href="/about">Know more about me!</Link>
             </button>
             <p className="text-2xl mx-5"></p>
-            <button className="text-white px-4 py-2 rounded-md bg-slate-700 bg-opacity-70 hover:bg-slate-500 hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md">
+            <button className="text-white px-4 py-2 rounded-md bg-slate-500 bg-opacity-70 hover:bg-slate-700 hover:bg-opacity-70 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md">
               <Link href="/about/contact">Contact Me!</Link>
             </button>
           </div>
