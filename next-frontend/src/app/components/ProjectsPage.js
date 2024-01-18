@@ -18,7 +18,7 @@ export default async function ProjectsPage() {
 
   console.log(projects);
   return (
-    <div className="flex h-full bg-gray-600 p-20 rounded-b-3xl">
+    <div className="flex h-full bg-gray-600 bg-opacity-60 p-20 rounded-b-3xl">
       <div className="container">
         <h2 className="text-3xl font-bold mb-8">My Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -44,9 +44,9 @@ export default async function ProjectsPage() {
                 <div className="flex items-center justify-between mt-4">
                   <div className="flex flex-wrap">
                     {project.technologies.split(", ").map((tech) => (
-                      <span key={tech} className="text-white px-2 list-disc">
-                        <li>{tech}</li>
-                      </span>
+                      <li key={tech} className="text-white px-2 min-w-32">
+                        {tech}
+                      </li>
                     ))}
                   </div>
                 </div>

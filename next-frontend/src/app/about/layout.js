@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 export default function AboutLayout({
@@ -6,10 +7,11 @@ export default function AboutLayout({
   return (
     <div div className="bg-[url('/assets/images/hero-bg.jpg')] bg-cover">
       <section className=" bg-gray-900 h-screen py-20 px-40 bg-opacity-70 ">
-        <div className="container rounded-3xl mx-auto mt-16 border-white border-2 ">
+        <div className="container rounded-3xl mx-auto mt-16 border-gray-400 border-2 ">
           <Navbar />
           {children}
         </div>
+        <Footer />
       </section>
     </div>
   );

@@ -23,25 +23,25 @@ export default async function ExperiencePage() {
 
   console.log(experiences);
   return (
-    <div className="flex justify-around h-full bg-gray-600 p-16 rounded-b-3xl">
+    <div className="flex justify-around h-full bg-gray-600 bg-opacity-60 p-16 rounded-b-3xl">
       <div>
         <h1 className="text-3xl font-bold mb-8">My Experiences</h1>
-        <ol class="relative border-s border-gray-200 dark:border-gray-700">
+        <ol className="relative border-s border-gray-200 dark:border-gray-300">
           {experiences.map((experience) => (
-            <li class="mb-10 ms-4">
-              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-              <time class="mb-1 text-md font-normal leading-none text-gray-300 dark:text-gray-300">
+            <li className="mb-10 ms-4">
+              <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-400 dark:bg-gray-900"></div>
+              <time className="mb-1 text-md font-normal leading-none text-gray-300 dark:text-gray-300">
                 {experience.date}
               </time>
-              <div class="flex items-center mb-2 text-lg font-semibold leading-none text-gray-200 dark:text-gray-300">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              <div className="flex items-center mb-2 text-lg font-semibold leading-none text-gray-200 dark:text-gray-300">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                   {experience.title} -{" "}
                 </h3>
-                <p class="text-md font-normal text-gray-500 dark:text-gray-300 mt-1 ml-2">
+                <p className="text-md font-normal text-gray-500 dark:text-gray-300 mt-1 ml-2">
                   {experience.company}
                 </p>
               </div>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-300">
+              <p className="text-base font-normal text-gray-500 dark:text-gray-300">
                 {experience.skills}
               </p>
             </li>
@@ -50,18 +50,18 @@ export default async function ExperiencePage() {
       </div>
       <div>
         <h1 className="text-3xl font-bold mb-8">My Education</h1>
-        <ol class="relative border-s border-gray-200 dark:border-gray-700">
+        <ol className="relative border-s border-gray-200 dark:border-gray-300">
           {educations.map((education) => (
-            <li class="mb-10 ms-4">
-              <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-              <time class="mb-1 text-md font-normal leading-none text-gray-300 dark:text-gray-300">
+            <li className="mb-10 ms-4">
+              <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-400 dark:bg-gray-900"></div>
+              <time className="mb-1 text-md font-normal leading-none text-gray-300 dark:text-gray-300">
                 {education.date}
               </time>
               s
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 {education.degree}
               </h3>
-              <p class="text-md font-normal text-gray-500 dark:text-gray-300">
+              <p className="text-md font-normal text-gray-500 dark:text-gray-300">
                 {education.institution}
               </p>
             </li>
