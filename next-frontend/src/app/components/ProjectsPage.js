@@ -1,6 +1,8 @@
 import React from "react";
 import { createClient } from "next-sanity";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default async function ProjectsPage() {
   const client = createClient({
@@ -16,10 +18,12 @@ export default async function ProjectsPage() {
     }
   );
   return (
-    <div className="flex h-full bg-gray-600 bg-opacity-60 p-20 rounded-b-3xl">
+    <div className="flex flex-col sm:flex-row h-full bg-gray-600 bg-opacity-60 p-4 sm:p-10 rounded-b-3xl md:p-5 lg:p-10 xl:p-20">
       <div className="container">
-        <h2 className="text-3xl font-bold mb-8">My Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-8 ">
+          My Projects
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {projects.map((project) => (
             <div
               key={project._id}
@@ -27,7 +31,7 @@ export default async function ProjectsPage() {
             >
               <div className="p-4">
                 <div className="flex items-center h-16 border-b-2">
-                  <h3 className="w-56 text-lg font-bold text-white tracking-tight mb-2">
+                  <h3 className="w-full sm:w-56 text-lg font-bold text-white tracking-tight mb-2 sm:mb-0 md:text-md">
                     {project.title}
                   </h3>
                   <Link
@@ -38,7 +42,9 @@ export default async function ProjectsPage() {
                     View &rarr;
                   </Link>
                 </div>
-                <p className="text-gray-400">{project.description}</p>
+                <p className="text-gray-400 md:text-sm">
+                  {project.description}
+                </p>
                 <div className="flex items-center justify-between mt-4">
                   <div className="flex flex-wrap">
                     {project.technologies.split(", ").map((tech) => (
