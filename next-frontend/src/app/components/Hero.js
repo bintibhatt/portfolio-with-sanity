@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="h-fit">
       <div className="container mx-auto px-4 md:px-8 py-10 md:pt-20 lg:pt-32 max-w-screen-xl">
-        <div className="relative z-20 my-36 2xl:mx-auto 2xl:mr-96 lg:ml-20 lg:mr-96 md:ml-10 md:my-24 md:mr-0">
+        <div className="relative z-20 my-36 2xl:mx-auto 2xl:mr-96 xl:mt-40 lg:ml-20 lg:mr-96 md:ml-10 md:my-24 md:mr-0">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight my-5 text-center  flex justify-center">
             Binti Bhatt
           </h1>
