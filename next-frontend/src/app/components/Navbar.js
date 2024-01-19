@@ -36,7 +36,7 @@ const Navbar = () => {
           <li
             className={
               isActive("/about")
-                ? `text-blue-400 underline hover:text-gray-300 p-2`
+                ? `text-blue-400 underline hover:text-gray-300`
                 : "hover:text-gray-300"
             }
           >
